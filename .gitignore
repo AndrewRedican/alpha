@@ -1,0 +1,78 @@
+###############################################
+# Common Lisp / SBCL compiled files
+###############################################
+
+# Generic compiled files
+*.fasl
+*.FASL
+*.lisp-temp
+
+# SBCL / CCL / ECL / CLISP compiled variants
+*.dfsl
+*.pfsl
+*.d64fsl
+*.p64fsl
+*.lx64fsl
+*.lx32fsl
+*.dx64fsl
+*.dx32fsl
+*.fx64fsl
+*.fx32fsl
+*.sx64fsl
+*.sx32fsl
+*.wx64fsl
+*.wx32fsl
+
+# ASDF fasl cache dirs
+**/.fasl-cache/
+.fasl-cache/
+
+###############################################
+# Quicklisp (keep out of repo)
+###############################################
+
+quicklisp/
+.quicklisp/
+qlfile.lock     # (only if using Qlot)
+
+###############################################
+# VS Code (keep configs, ignore machine junk)
+###############################################
+
+# Ignore *only* user-specific or auto-generated files
+.vscode/*.log
+.vscode/*.cache
+.vscode/settings.json.backup
+.vscode/extensions.json.backup
+
+# Allow these files to be committed:
+!/.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+###############################################
+# Editor / OS junk
+###############################################
+
+# Emacs
+*~
+# Vim
+*.swp
+*.swo
+# macOS
+.DS_Store
+# Linux
+.directory
+# Windows
+Thumbs.db
+
+###############################################
+# Generic build / temp dirs
+###############################################
+
+/build/
+/bin/
+/dist/
+/tmp/

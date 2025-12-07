@@ -1,0 +1,16 @@
+{
+  "editor.tabSize": 2,
+
+  // Common Lisp language support
+  "files.associations": {
+    "*.lisp": "commonlisp",
+    "*.asd": "commonlisp"
+  },
+
+  // Optional: auto-formatting behavior
+  "editor.formatOnSave": false,
+
+  // If you run a Swank server later
+  "commonlisp.lisp": "sbcl",
+  "commonlisp.implementation": "sbcl"
+}

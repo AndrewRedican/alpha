@@ -1,0 +1,18 @@
+;;; ~/.sbclrc  - SBCL startup config for alpha dev container
+
+;;; 1. Load Quicklisp quietly if installed
+(let ((ql-init (merge-pathnames "quicklisp/setup.lisp"
+                                (user-homedir-pathname))))
+  (when (probe-file ql-init)
+    (load ql-init :verbose nil)))
+
+;;; 2. Nicer default printing in the REPL
+(setq *print-pretty* t)     ; pretty-print complex results
+(setq *print-length* 50)    ; avoid printing insanely long lists
+(setq *print-level*  10)    ; limit nested structures a bit
+
+;;; 3. Helpful REPL prompt (shows package name)
+(defun alpha-simple-prompt (stream)
+  (format stream "~&~A> " (package-name *package*)))
+
+(setf sb-int:*repl-prompt-fun* #'alpha-simple-prompt)
